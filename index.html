@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html data-ng-app="TwitterTrends">
+<head>
+    <title></title>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script>
+        function TwitterTrendsController($scope, $http) {
+               $http.get('http://twittertrends.apphb.com').
+                   success(function(data) {
+                       $scope.greeting = data;
+        });
+}
+       </script>
+</head>
+<body>
+    <div data-ng-controller="TwitterTrendsController">
+
+    </div>
+</body>
+</html>
